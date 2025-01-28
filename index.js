@@ -1,6 +1,8 @@
-import axios from "axios";;
-require("dotenv").config(); // Loads environment variables
-const { twitterClient } = require("./twitterClient.js");
+import axios from "axios";
+import dotenv from "dotenv";  // Using import instead of require
+import { twitterClient } from "./twitterClient.js";  // Using import for twitterClient
+
+dotenv.config(); // Loads environment variables
 
 // Hugging Face API URL and Key
 const HF_API_URL = "https://api-inference.huggingface.co/models/gpt2"; // Example: GPT-2
