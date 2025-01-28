@@ -9,6 +9,7 @@
   "author": "Matt Hughes",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.9",
     "dotenv": "^16.0.3",
     "twitter-api-v2": "^1.12.10"
   },
