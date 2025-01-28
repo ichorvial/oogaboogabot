@@ -1,5 +1,7 @@
 import { TwitterApi } from 'twitter-api-v2';
 import dotenv from 'dotenv';
+import axios from 'axios';
+
 dotenv.config();
 
 const handleTweet = () => {
