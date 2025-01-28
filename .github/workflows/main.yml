@@ -3,7 +3,8 @@ name: send-tweet
 on:
   schedule:
     - cron: '0 */2 * * *'  # Every 2 hours
-  # workflow_dispatch: # Uncomment this line if you want to allow manual triggering
+  workflow_dispatch:  # Allow manual triggering
+
 jobs:
   tweet:
     runs-on: ubuntu-latest
