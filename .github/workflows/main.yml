@@ -2,7 +2,7 @@ name: send-tweet
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Every 5 minutes
+    - cron: '0 */2 * * *'  # Every 2 hours
   workflow_dispatch:  # Allow manual triggering
 
 jobs:
