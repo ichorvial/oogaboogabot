@@ -3,7 +3,6 @@ name: send-tweet
 on:
   schedule:
     - cron: '*/5 * * * *'  # Every 5 minutes
-
   workflow_dispatch:  # Allow manual triggering
 
 jobs:
@@ -21,5 +20,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm i
+      - name: Check if ENV_FILE secret is available
+        run: |
+          if [ -z "${{ secrets.ENV_FILE }}" ]; then
+            echo "ENV_FILE secret is missing!"
+            exit 1
+          fi
       - run: echo "${{ secrets.ENV_FILE }}" > .env
       - run: node index.js
